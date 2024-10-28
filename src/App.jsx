@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
+import {Button} from "@mui/material"
 import './App.css';
 
 function App() {
   const [inputValue, setInputValue] = useState('');
   const [items, setItems] = useState([]);
+  //litros de agua de la alberca
   const [calculatedValue, setCalculatedValue] = useState(null);
-  const [calculatedValue08, setCalculatedValue08] = useState(null);
+  //mezcla de la bomba 20 litros
+  const [ValueBomba, setValueBomba] = useState(null);
+  //cc de graduarte
+  const [ValueGraduarte, setValueGraduarte] = useState(null);
+  //Gramos de ryzup
+  const [ValueRyzup, setValueRyzup] = useState(null);
 
   const addItem = () => {
     if (inputValue) {
@@ -31,14 +38,24 @@ function App() {
   const calculateValue = (value) => {
     const numericValue = parseFloat(value);
     if (!isNaN(numericValue)) {
+      //total de litros
       const result = numericValue * 0.18;
       setCalculatedValue(result);
-      setCalculatedValue08(result * 0.84); // Multiplicamos el resultado por 0.08
+      //meszcla de agua y graduerto
+      setValueGraduarte(result * 0.84);
+       // mezcla de bomba
+       const result2 = numericValue * 0.02;
+       setValueBomba(result2)
+       //gramos de ryzup
+       setValueRyzup(result2 * 2.5)
     }
   };
 
   return (
     <div>
+       <Button variant="outlined" color="error">
+  Error
+</Button>
       <h1>Mi Aplicación</h1>
       <input
         type="text"
@@ -47,7 +64,7 @@ function App() {
         placeholder="Ingresa un valor"
       />
       <button onClick={addItem}>Agregar</button>
-
+     
       <div>
         <h2>Valores Agregados:</h2>
         {items.map((item, index) => (
@@ -62,18 +79,31 @@ function App() {
 
       {calculatedValue !== null && (
         <div>
-          <h2>Valor Calculado (x0.18):</h2>
+          <h2>Litros de agua alberca:</h2>
           <p>{calculatedValue}</p>
         </div>
       )}
 
-      {calculatedValue08 !== null && (
+      {ValueGraduarte !== null && (
         <div>
-          <h2>Valor Calculado (resultado x0.84):</h2>
-          <p>{calculatedValue08}</p>
+          <h2>Cantida de Graduarte:</h2>
+          <p>{ValueGraduarte}</p>
+        </div>
+      )}
+       {ValueBomba !== null && (
+        <div>
+          <h2>Cantida de mezcla de bomba :</h2>
+          <p>{ValueBomba}</p>
+        </div>
+      )}
+       {ValueRyzup !== null && (
+        <div>
+          <h2>Gramos de ryzup:</h2>
+          <p>{ValueRyzup}</p>
         </div>
       )}
     </div>
+    
   );
 }
 
