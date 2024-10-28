@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
-import {Button} from "@mui/material"
-import './App.css';
+import { Button } from "@mui/material";
+ // Asegúrate de que la ruta sea correcta
 
 function App() {
   const [inputValue, setInputValue] = useState('');
   const [items, setItems] = useState([]);
-  //litros de agua de la alberca
   const [calculatedValue, setCalculatedValue] = useState(null);
-  //mezcla de la bomba 20 litros
   const [ValueBomba, setValueBomba] = useState(null);
-  //cc de graduarte
   const [ValueGraduarte, setValueGraduarte] = useState(null);
-  //Gramos de ryzup
   const [ValueRyzup, setValueRyzup] = useState(null);
 
   const addItem = () => {
@@ -38,24 +34,17 @@ function App() {
   const calculateValue = (value) => {
     const numericValue = parseFloat(value);
     if (!isNaN(numericValue)) {
-      //total de litros
       const result = numericValue * 0.18;
       setCalculatedValue(result);
-      //meszcla de agua y graduerto
       setValueGraduarte(result * 0.84);
-       // mezcla de bomba
-       const result2 = numericValue * 0.02;
-       setValueBomba(result2)
-       //gramos de ryzup
-       setValueRyzup(result2 * 2.5)
+      const result2 = numericValue * 0.02;
+      setValueBomba(result2);
+      setValueRyzup(result2 * 2.5);
     }
   };
 
   return (
-    <div>
-       <Button variant="outlined" color="error">
-  Error
-</Button>
+    <div id="app-container"> {/* Aquí está el contenedor con el ID app-container */}
       <h1>Mi Aplicación</h1>
       <input
         type="text"
@@ -90,20 +79,19 @@ function App() {
           <p>{ValueGraduarte}</p>
         </div>
       )}
-       {ValueBomba !== null && (
+      {ValueBomba !== null && (
         <div>
           <h2>Cantida de mezcla de bomba :</h2>
           <p>{ValueBomba}</p>
         </div>
       )}
-       {ValueRyzup !== null && (
+      {ValueRyzup !== null && (
         <div>
           <h2>Gramos de ryzup:</h2>
           <p>{ValueRyzup}</p>
         </div>
       )}
     </div>
-    
   );
 }
 
