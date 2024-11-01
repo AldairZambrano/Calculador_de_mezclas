@@ -1,8 +1,8 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- APP creada con el fin de sacar el  máximo provecho de la tecnología de React y Vite para  la creación de aplicaciones web. -->
 
-Currently, two official plugins are available:
+<!-- Funciones  principales de la aplicación: -->
+<!-- Recibir un numero de datos en su defecto cajas con el fin de sacar un promedio de la cantida de materiales que se van a usar en la labor -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<!-- Creador Aldair Zambrano ✌ -->

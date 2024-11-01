@@ -58,17 +58,22 @@ function App() {
         placeholder="Ingresa un valor"
       />
       <div className='ButtonInput'>
-        <Button variant='outlined' color='terciary' style={{width:"105px"}} onClick={addItem}>Agregar</Button>
-        <Button variant='outlined' color='terciary' style={{width:"105px"}} onClick={actualizar}>Actualizar</Button>
+        <Button variant='outlined'  style={{width:"105px",border:"1px solid #4ea93b", color:"black"}} onClick={addItem}>Agregar</Button>
+       
       </div>
       <div>
         <h2>Valores Agregados:</h2>
         {items.map((item, index) => (
           <div key={index}>
             <span>{item}</span>
-            <button onClick={() => calculateValue(item)}>Calcular</button>
-            <button onClick={() => editItem(index)}>Editar</button>
-            <button onClick={() => deleteItem(index)}>Borrar</button>
+            <button style={{color:"black",background:"none",border:"1px solid #4ea93b"}} onClick={() => calculateValue(item)}>Calcular</button>
+            <button style={{color:"black",background:"none",border:"1px solid #4ea93b"}}onClick={() => editItem(index)}>Editar</button>
+            <button style={{color:"black",background:"none",border:"1px solid red"}} onClick={() => {
+              if (window.confirm('¿Estás seguro de actualizar el valor?')) {
+                window.location.href = '/';
+                } 
+
+            }}>Actualizar</button>
 
           </div>
         ))}
