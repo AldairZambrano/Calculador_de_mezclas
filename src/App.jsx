@@ -50,7 +50,7 @@ function App() {
 
   return (
     <div id="app-container"> {/* Aquí está el contenedor con el ID app-container */}
-      <h1 style={{textAlign:"center",fontSize:"31px"}}>Calculadora de mezclas </h1>
+      <h1 style={{textAlign:"center",fontSize:"31px"}}>InsumoSmart</h1>
       <input
         type="number"
         value={inputValue}
