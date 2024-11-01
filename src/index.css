@@ -1,9 +1,12 @@
 /* styles.css */
-
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: #f0f0f0; /* Color de fondo */
 }
 
@@ -41,7 +44,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3; /* Color de fondo al pasar el mouse */
+  background-color: transparent; /* Color de fondo al pasar el mouse */
 }
 
 h2 {
@@ -56,6 +59,24 @@ div {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para las secciones */
   width: 100%;
   max-width: 400px; /* Ancho máximo para secciones */
+}
+/* estilos del botton del input */
+.ButtonInput{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ButtonInput Button{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* estilos de los sub de las mezclas */
+
+.nameMez {
+  color: #594f4f;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 /* Media Queries para Responsividad */
@@ -76,3 +97,7 @@ div {
     width: 95%; /* Ancho del 95% en pantallas pequeñas */
   }
 }
+
+
+
+

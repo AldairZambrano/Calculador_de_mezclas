@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from "@mui/material";
+
  // Asegúrate de que la ruta sea correcta
 
 function App() {
@@ -10,6 +11,10 @@ function App() {
   const [ValueGraduarte, setValueGraduarte] = useState(null);
   const [ValueRyzup, setValueRyzup] = useState(null);
 
+  const actualizar = () =>  {
+    window.location.href = '/';
+    }
+    console.log(actualizar)
   const addItem = () => {
     if (inputValue) {
       setItems([...items, inputValue]);
@@ -45,23 +50,26 @@ function App() {
 
   return (
     <div id="app-container"> {/* Aquí está el contenedor con el ID app-container */}
-      <h1>Mi Aplicación</h1>
+      <h1 style={{textAlign:"center",fontSize:"31px"}}>Calculadora de mezclas </h1>
       <input
-        type="text"
+        type="number"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         placeholder="Ingresa un valor"
       />
-      <button onClick={addItem}>Agregar</button>
-     
+      <div className='ButtonInput'>
+        <Button variant='outlined' color='terciary' style={{width:"105px"}} onClick={addItem}>Agregar</Button>
+        <Button variant='outlined' color='terciary' style={{width:"105px"}} onClick={actualizar}>Actualizar</Button>
+      </div>
       <div>
         <h2>Valores Agregados:</h2>
         {items.map((item, index) => (
           <div key={index}>
             <span>{item}</span>
-            <button onClick={() => deleteItem(index)}>Borrar</button>
-            <button onClick={() => editItem(index)}>Editar</button>
             <button onClick={() => calculateValue(item)}>Calcular</button>
+            <button onClick={() => editItem(index)}>Editar</button>
+            <button onClick={() => deleteItem(index)}>Borrar</button>
+
           </div>
         ))}
       </div>
@@ -69,26 +77,26 @@ function App() {
       {calculatedValue !== null && (
         <div>
           <h2>Litros de agua alberca:</h2>
-          <p>{calculatedValue}</p>
+          <p>{calculatedValue.toFixed(0)} <span className='nameMez'>Litros</span></p>
         </div>
       )}
 
       {ValueGraduarte !== null && (
         <div>
-          <h2>Cantida de Graduarte:</h2>
-          <p>{ValueGraduarte}</p>
+          <h2>Cantida de Graduate:</h2>
+          <p>{ValueGraduarte.toFixed(0)} <span className='nameMez'>CC</span></p>
         </div>
       )}
       {ValueBomba !== null && (
         <div>
           <h2>Cantida de mezcla de bomba :</h2>
-          <p>{ValueBomba}</p>
+          <p>{ValueBomba.toFixed(0)} <span className='nameMez'>M</span></p>
         </div>
       )}
       {ValueRyzup !== null && (
         <div>
           <h2>Gramos de ryzup:</h2>
-          <p>{ValueRyzup}</p>
+          <p>{ValueRyzup.toFixed(0)} <span className='nameMez'>Gramos</span></p>
         </div>
       )}
     </div>
