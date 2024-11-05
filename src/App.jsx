@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from "@mui/material";
 
- // Asegúrate de que la ruta sea correcta
+
 
 function App() {
   const [inputValue, setInputValue] = useState('');
@@ -49,7 +49,7 @@ function App() {
   };
 
   return (
-    <div id="app-container"> {/* Aquí está el contenedor con el ID app-container */}
+    <div id="app-container">
       <h1 style={{textAlign:"center",fontSize:"31px"}}>InsumoSmart</h1>
       <input
         type="number"

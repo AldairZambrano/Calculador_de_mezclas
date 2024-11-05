@@ -1,4 +1,3 @@
-/* styles.css */
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +6,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  background-color: #f0f0f0; /* Color de fondo */
+  background-color: #f0f0f0;
 }
 
 #app-container {
@@ -15,7 +14,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Altura mínima para centrar verticalmente */
+  min-height: 100vh; 
   padding: 20px;
 
   
@@ -31,7 +30,7 @@ input {
   border: 1px solid green;
   border-radius: 5px;
   width: 100%;
-  max-width: 400px; /* Ancho máximo para dispositivos más grandes */
+  max-width: 400px;
 }
 
 button {
@@ -51,15 +50,15 @@ h2 {
 }
 
 div {
-  background: white; /* Fondo blanco para las secciones */
+  background: white;
   padding: 15px;
   margin: 10px 0;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para las secciones */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   width: 100%;
-  max-width: 400px; /* Ancho máximo para secciones */
+  max-width: 400px; 
 }
-/* estilos del botton del input */
+
 .ButtonInput{
   display: flex;
   justify-content: center;
@@ -75,7 +74,7 @@ div {
   border: 2px solid black;
 }
 
-/* estilos de los sub de las mezclas */
+
 
 .nameMez {
   color: #594f4f;
@@ -83,7 +82,7 @@ div {
   font-size: 14px;
 }
 
-/* Media Queries para Responsividad */
+
 @media (max-width: 1200px) { /* PC */
   #app-container {
     padding: 4px;
