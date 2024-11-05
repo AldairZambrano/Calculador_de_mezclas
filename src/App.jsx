@@ -55,7 +55,7 @@ function App() {
         type="number"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
-        placeholder="Ingresa un valor"
+        placeholder="Ingrese el valor de las cajas"
       />
       <div className='ButtonInput'>
         <Button variant='outlined'  style={{width:"105px",border:"1px solid #4ea93b", color:"black"}} onClick={addItem}>Agregar</Button>
