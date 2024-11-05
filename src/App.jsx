@@ -62,7 +62,7 @@ function App() {
        
       </div>
       <div>
-        <h2>Valores Agregados:</h2>
+        <h2>Cajas Agregadas:</h2>
         {items.map((item, index) => (
           <div key={index}>
             <span>{item}</span>
