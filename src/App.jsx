@@ -81,21 +81,20 @@ function App() {
 
       {calculatedValue !== null && (
         <div>
-          <h2>Litros de agua alberca:</h2>
+          <h2>Agua de Alumbre total:</h2>
           <p>{calculatedValue.toFixed(0)} <span className='nameMez'>Litros</span></p>
         </div>
       )}
-
+        {ValueBomba !== null && (
+        <div>
+          <h2>Agua de bomba 20LT:</h2>
+          <p>{ValueBomba.toFixed(0)} <span className='nameMez'></span> Litros</p>
+        </div>
+      )}
       {ValueGraduarte !== null && (
         <div>
           <h2>Cantida de Graduate:</h2>
-          <p>{ValueGraduarte.toFixed(0)} <span className='nameMez'>CC</span></p>
-        </div>
-      )}
-      {ValueBomba !== null && (
-        <div>
-          <h2>Cantida de mezcla de bomba :</h2>
-          <p>{ValueBomba.toFixed(0)} <span className='nameMez'>M</span></p>
+          <p>{ValueGraduarte.toFixed(0)} <span className='nameMez'>Litros</span></p>
         </div>
       )}
       {ValueRyzup !== null && (
