@@ -93,8 +93,8 @@ function App() {
       )}
       {ValueGraduarte !== null && (
         <div>
-          <h2>Cantida de Graduate:</h2>
-          <p>{ValueGraduarte.toFixed(0)} <span className='nameMez'>Litros</span></p>
+          <h2>Centimetros cubicos de Graduate:</h2>
+          <p>{ValueGraduarte.toFixed(0)} <span className='nameMez'>CC</span></p>
         </div>
       )}
       {ValueRyzup !== null && (
