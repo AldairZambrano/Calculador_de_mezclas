@@ -81,7 +81,7 @@ function App() {
 
       {calculatedValue !== null && (
         <div>
-          <h2>Agua de Alumbre total:</h2>
+          <h2>Agua de Alumbre totals:</h2>
           <p>{calculatedValue.toFixed(0)} <span className='nameMez'>Litros</span></p>
         </div>
       )}
