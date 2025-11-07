@@ -1,5 +1,8 @@
 // ---------- CalculationsPanel ----------
-function CalculationsPanel({ data }) {
+const formatNumber = (n) => Number(n).toLocaleString("es-CO");
+
+
+import { motion, AnimatePresence } from "framer-motion";function CalculationsPanel({ data }) {
   if (!data) {
     return (
       <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 border dark:border-gray-700 shadow-sm">

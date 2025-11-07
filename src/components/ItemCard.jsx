@@ -1,4 +1,5 @@
 // ---------- ItemCard ----------
+import { motion, AnimatePresence } from "framer-motion";
 const formatNumber = (n) => Number(n).toLocaleString("es-CO");
 
 
