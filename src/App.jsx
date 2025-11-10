@@ -140,7 +140,7 @@ export default function App() {
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 border dark:border-gray-700 shadow-sm">
               <h4 className="text-sm text-gray-500 mb-2">Acciones rápidas</h4>
               <div className="flex flex-col gap-2">
-                <button onClick={() => navigator.clipboard && results && navigator.clipboard.writeText(JSON.stringify(results))} className="px-3 py-2 rounded-lg border text-sm">Copiar resultado (JSON)</button>
+                {/* <button onClick={() => navigator.clipboard && results && navigator.clipboard.writeText(JSON.stringify(results))} className="px-3 py-2 rounded-lg border text-sm">Copiar resultado (JSON)</button> */}
                 <button onClick={() => alert('Función en desarrollo') } className="px-3 py-2 rounded-lg border text-sm">Exportar CSV</button>
               </div>
             </div>

@@ -18,10 +18,10 @@ function AddForm({ onAdd }) {
           type="number"
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          className="flex-1 p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-green-400"
+          className="responsive flex-1 p-2px sm:p-1 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-green-400"
           placeholder="e.g. 120"
         />
-        <button className="px-4 py-3 bg-green-600 hover:bg-green-700 text-white rounded-xl font-semibold shadow-md">Agregar</button>
+        <button className=" px-4 py-3 bg-green-600 hover:bg-green-700 text-white rounded-xl font-semibold shadow-md">Agregar</button>
       </div>
     </form>
   );

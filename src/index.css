@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (max-width:350px ) {
+    .responsive{
+      padding: calc(var(--spacing) * 0.1);
+    }
+}
