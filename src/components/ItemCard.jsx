@@ -1,5 +1,5 @@
-// ---------- ItemCard ----------
 import { motion, AnimatePresence } from "framer-motion";
+import { FaBoxes } from "react-icons/fa";
 const formatNumber = (n) => Number(n).toLocaleString("es-CO");
 
 
@@ -13,7 +13,7 @@ function ItemCard({ item, index, onDelete, onEdit, onCalculate }) {
       className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-4 border dark:border-gray-700 flex flex-col sm:flex-row items-start sm:items-center gap-3"
     >
       <div className="flex-1">
-        <div className="text-lg font-medium text-gray-800 dark:text-white">{formatNumber(item.value)}</div>
+        <div className="flex items-center gap-2  text-lg font-medium text-gray-800 dark:text-white">{formatNumber(item.value)} <FaBoxes /></div>
         <div className="text-xs text-gray-500 dark:text-gray-300">Registrado: {new Date(item.addedAt).toLocaleString()}</div>
       </div>
 
