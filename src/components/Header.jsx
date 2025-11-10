@@ -3,7 +3,7 @@ function Header({ dark, onToggleTheme, totalItems }) {
     <header className="flex items-center justify-between py-4 px-6 bg-white dark:bg-gray-900/60 border-b dark:border-gray-800">
       <div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-800 dark:text-white">InsumoSmart</h1>
-        <p className="text-sm text-gray-500 dark:text-gray-300">Calculadora y gestor de cajas</p>
+        <p className="text-sm text-gray-500 dark:text-gray-300">Control de Cajas e Insumos</p>
       </div>
 
       <div className="flex items-center gap-4">
